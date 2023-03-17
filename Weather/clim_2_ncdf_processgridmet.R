@@ -73,7 +73,7 @@ if (plots) {
 # Maps need to be based on the netcdf resolution + extent
 dem_nc = resample(DEM, nc_grid)
 # LAI
-#I meed to figure out how to use data from real LAI map.. replicate file from ming.
+#I need to figure out how to use data from real LAI map.. replicate file from ming.
 #lai_nc = rast ("Data/LAI.tif")
 #lai_nc = mask (lai_nc, DEM, filename="MASK_LAI.tif")
 
