@@ -11,7 +11,7 @@
 #
 # Inputs:
 #   - Aggregated (through time), netcdf climate data, via: #http://thredds.northwestknowledge.net:8080/thredds/reacch_climate_MET_aggregated_catalog.html
-#     (easies to use/download spatial subset to begin with, via the NetcdfSubset download option)
+#     (easier to use/download spatial subset to begin with, via the NetcdfSubset download option)
 #   - Basin raster
 
 library(ncdf4)
