@@ -1,0 +1,148 @@
+1 num_basin_files
+defs/basin_basin.def
+1 num_hillslope_files
+defs/hillslope_hillslope.def
+1 num_zone_files
+defs/zone_zone.def
+7 num_patch_files
+defs/soil_clay-loam.def
+defs/soil_loam.def
+defs/soil_loamy-sand.def
+defs/soil_rock.def
+defs/soil_sandy-clay-loam.def
+defs/soil_sandy-loam.def
+defs/soil_water.def
+3 num_landuse_files      
+defs/landuse_agriculture.def
+defs/landuse_undeveloped.def
+defs/landuse_urban.def
+9 num_canopy_strata_files
+defs/stratum_deciduous.def
+defs/stratum_evergreen.def
+defs/stratum_grass.def
+defs/stratum_nonveg.def
+defs/stratum_shrub.def
+defs/stratum_underpine.def
+defs/stratum_underdecid.def
+defs/stratum_nonveg_under.def
+defs/stratum_water.def
+1
+Climate/clim/netcdfmaps/netcdf.base
+_world Basin 1
+ _basin Basin 1
+	x                  aver xLoc_UTM
+      y                  aver yLoc_UTM
+      z                  aver DEM
+      basin_parm_ID  	 dvalue 1
+      latitude           value 40.37
+	n_basestations 	 dvalue 0
+      _hillslope  Hillslope 1
+             x                     	aver xLoc_UTM
+     		 y                  	aver yLoc_UTM
+     		 z                 	aver DEM
+     		 hill_parm_ID  	      dvalue 1
+      	 gw.storage			value 0.0
+		 gw.NO3			value 0.0
+		 n_basestations 	 	dvalue 0	
+			_zone Patches 1 
+				x				aver xLoc_UTM
+				y				aver yLoc_UTM
+				z				aver DEM
+				zone_parm_ID		dvalue 1
+				area				area	
+				slope				aver Slope
+				aspect			spavg Aspect Slope
+				precip_lapse_rate	      value 1.0 
+				e_horizon    		eqn 0.001 0.0  ehr.100
+				w_horizon   	 	eqn 0.001 0.0  whr.100	
+				n_basestations		dvalue 1	
+				base_station_ID		mode Station_ID
+					_patch Patches 1
+							x				aver xLoc_UTM
+							y				aver yLoc_UTM
+							z				aver DEM
+							soil_parm_ID		mode Soil_Map
+							landuse_parm_ID		mode Landuse
+							area				area	
+							slope				aver Slope
+							lna				aver Lna
+							Ksat_vertical           eqn -1 1 impervious
+							mpar				value 0.12 
+							rz_storage			value 0.0
+							unsat_storage		value	0.0
+							sat_deficit 		value	0.0
+							snowpack.water_equivalent_depth value 0.28 
+							snowpack.water_depth	value 0.0
+							snowpack.T 			value -10.0
+							snowpack.surface_age	value 0.0
+							snowpack.energy_deficit value -0.5 
+							litter.cover_fraction	value 1.0
+							litter.rain_stored	value 0.0
+							litter_cs.litr1c 		value	0.0
+							litter_ns.litr1n 		value	0.0
+							litter_cs.litr2c 		value	0.0
+							litter_cs.litr3c 		value	0.0
+							litter_cs.litr4c 		value	0.0
+							soil_cs.soil1c 		value	0.0
+							soil_ns.sminn		value	0.0
+							soil_ns.nitrate		value 0.0
+							soil_cs.soil2c		value	0.0	
+							soil_cs.soil3c   		value	0.0
+							soil_cs.soil4c		value	0.0
+							n_basestations		dvalue 0
+								_canopy_strata Patches 2	
+									veg_parm_ID		mode Overstory Understory
+									cover_fraction	value 1.0 1.0
+									gap_fraction	value 0.0 0.0
+									rootzone.depth	value 1.0 1.0
+									snow_stored		value 0.0 0.0
+									rain_stored		value 0.0 0.0  
+									cs.cpool		value 0.0 0.0
+									cs.leafc		value 0.0 0.0
+									cs.dead_leafc	value 0.0 0.0
+									cs.leafc_store	value 0.0 0.0
+									cs.leafc_transfer	value 0.0 0.0
+									cs.live_stemc	value 0.0 0.0
+									cs.live_stemc_store 	value 0.0 0.0
+									cs.live_stemc_transfer	value 0.0 0.0
+									cs.dead_stem		value 0.0 0.0
+									cs.dead_stemc_store	value 0.0 0.0
+									cs.dead_stemc_transfer	value 0.0 0.0  
+									cs.live_crootc		value 0.0 0.0
+									cs.live_crootc_store	value 0.0 0.0
+									cs.live_crootc_transfer	value 0.0 0.0
+									cs.dead_crootc		value 0.0 0.0
+									cs.dead_crootc_store	value 0.0 0.0
+									cs.dead_crootc_transfer	value 0.0 0.0
+									cs.frootc			value 0.0 0.0
+									cs.frootc_store		value 0.0 0.0
+									cs.frootc_transfer	value 0.0 0.0
+									cs.cwdc			value 0.0 0.0
+									epv.prev_leafcalloc	value 0.0 0.0
+									ns.npool			value 0.0 0.0 
+									ns.leafn			value 0.0 0.0
+									ns.dead_leafn		value 0.0 0.0
+									ns.leafn_store		value 0.0 0.0
+									ns.leafn_transfer		value 0.0 0.0
+									ns.live_stemn		value 0.0 0.0
+									ns.live_stemn_store	value 0.0 0.0
+									ns.live_stemn_transfer	value 0.0 0.0
+									ns.dead_stem		value 0.0 0.0
+									ns.dead_stemn_store	value 0.0 0.0
+									ns.dead_stemn_transfer	value 0.0 0.0
+									ns.live_crootn		value 0.0 0.0
+									ns.live_crootn_store	value 0.0 0.0
+									ns.live_crootn_transfer	value 0.0 0.0 
+									ns.dead_crootn		value 0.0 0.0
+									ns.dead_crootn_store	value 0.0 0.0
+									ns.dead_crootn_transfer	value 0.0 0.0
+									ns.frootn			value 0.0 0.0
+									ns.frootn_store		value 0.0 0.0 
+									ns.frootn_transfer	value 0.0 0.0
+									ns.cwdn			value 0.0 0.0
+									ns.retransn			value 0.0 0.0
+									epv.wstress_days		dvalue 0 0
+									epv.max_fparabs		value 0.0 0.0
+									epv.min_vwc			value 0.0 0.0
+									n_basestations 		dvalue 0 0 
+
